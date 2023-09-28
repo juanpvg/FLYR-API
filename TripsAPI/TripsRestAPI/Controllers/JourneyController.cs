@@ -24,7 +24,7 @@ namespace TripsRestAPI.Controllers
                 return journeys;
             }
 
-            // Get journeys from third party URL
+            // Get journeys from third party URL complete
             // add Journeys to DB
             // return Journeys
             return journeys;
