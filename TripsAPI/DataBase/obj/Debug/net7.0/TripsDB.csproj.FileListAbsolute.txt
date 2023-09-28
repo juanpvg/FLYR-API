@@ -1,0 +1,14 @@
+D:\Proyectos\NewShore\Trips\TripsAPI\DataBase\bin\Debug\net7.0\TripsDB.deps.json
+D:\Proyectos\NewShore\Trips\TripsAPI\DataBase\bin\Debug\net7.0\TripsDB.runtimeconfig.json
+D:\Proyectos\NewShore\Trips\TripsAPI\DataBase\bin\Debug\net7.0\TripsDB.dll
+D:\Proyectos\NewShore\Trips\TripsAPI\DataBase\bin\Debug\net7.0\TripsDB.pdb
+D:\Proyectos\NewShore\Trips\TripsAPI\DataBase\obj\Debug\net7.0\TripsDB.csproj.AssemblyReference.cache
+D:\Proyectos\NewShore\Trips\TripsAPI\DataBase\obj\Debug\net7.0\TripsDB.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos\NewShore\Trips\TripsAPI\DataBase\obj\Debug\net7.0\TripsDB.AssemblyInfoInputs.cache
+D:\Proyectos\NewShore\Trips\TripsAPI\DataBase\obj\Debug\net7.0\TripsDB.AssemblyInfo.cs
+D:\Proyectos\NewShore\Trips\TripsAPI\DataBase\obj\Debug\net7.0\TripsDB.csproj.CoreCompileInputs.cache
+D:\Proyectos\NewShore\Trips\TripsAPI\DataBase\obj\Debug\net7.0\TripsDB.dll
+D:\Proyectos\NewShore\Trips\TripsAPI\DataBase\obj\Debug\net7.0\refint\TripsDB.dll
+D:\Proyectos\NewShore\Trips\TripsAPI\DataBase\obj\Debug\net7.0\TripsDB.pdb
+D:\Proyectos\NewShore\Trips\TripsAPI\DataBase\obj\Debug\net7.0\TripsDB.genruntimeconfig.cache
+D:\Proyectos\NewShore\Trips\TripsAPI\DataBase\obj\Debug\net7.0\ref\TripsDB.dll
