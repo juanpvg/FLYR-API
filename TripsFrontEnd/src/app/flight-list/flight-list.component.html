@@ -1,25 +1,16 @@
 <div class="container mx-auto">
     <h1 class="text-2xl font-bold mt-4 mb-8">Flight Data List</h1>
-    <table class="min-w-full">
-      <thead>
-        <tr>
-          <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-            Origin
-          </th>
-          <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-            Destination
-          </th>
-          <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-            Price
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let item of data">
-          <td class="px-6 py-4 whitespace-no-wrap">{{ item.Origin }}</td>
-          <td class="px-6 py-4 whitespace-no-wrap">{{ item.Destination }}</td>
-          <td class="px-6 py-4 whitespace-no-wrap">{{ item.price }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <div *ngFor="let flight of data" class="mb-4 p-4 border rounded-lg">
+      <div class="text-lg font-semibold">{{ flight.origin }} - {{ flight.destination }}</div>
+      <div class="text-gray-600">Price: ${{ flight.price }}</div>
+      <div class="mt-2">
+        <h2 class="text-xl font-semibold">Flights</h2>
+        <ul>
+          <li *ngFor="let flightDetail of flight.flights">
+            <div>{{ flightDetail.origin }} to {{ flightDetail.destination }}</div>
+            <div>Price: ${{ flightDetail.price }}</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+ </div>
