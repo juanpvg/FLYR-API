@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { FlightFormComponent } from './flight-form/flight-form.component';
 
 import { FormsModule } from '@angular/forms';
+import { FlightListComponent } from './flight-list/flight-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FlightFormComponent
+    FlightFormComponent,
+    FlightListComponent
   ],
   imports: [
     BrowserModule,
