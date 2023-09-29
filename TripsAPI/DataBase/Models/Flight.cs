@@ -25,12 +25,5 @@ namespace TripsDb.Models
 
         public int TransportId { get; set; }
 
-
-        [ForeignKey("JourneyId")]
-        public virtual Journey Journey { get; set; } = null!;
-
-        public int JourneyId { get; set; } 
-
-
     }
 }

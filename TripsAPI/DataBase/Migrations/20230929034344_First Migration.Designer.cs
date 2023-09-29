@@ -11,7 +11,7 @@ using TripsDb.Models;
 namespace TripsDb.Migrations
 {
     [DbContext(typeof(TripsDbContext))]
-    [Migration("20230928214615_First Migration")]
+    [Migration("20230929034344_First Migration")]
     partial class FirstMigration
     {
         /// <inheritdoc />
@@ -36,9 +36,6 @@ namespace TripsDb.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<int>("JourneyId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Origin")
                         .IsRequired()
                         .HasColumnType("nvarchar(100)");
@@ -51,35 +48,9 @@ namespace TripsDb.Migrations
 
                     b.HasKey("FlightId");
 
-                    b.HasIndex("JourneyId");
-
                     b.HasIndex("TransportId");
 
                     b.ToTable("Flight", (string)null);
-                });
-
-            modelBuilder.Entity("TripsDb.Models.Journey", b =>
-                {
-                    b.Property<int>("JourneyId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("JourneyId"));
-
-                    b.Property<string>("Destination")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("Origin")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(19, 4)");
-
-                    b.HasKey("JourneyId");
-
-                    b.ToTable("Journey", (string)null);
                 });
 
             modelBuilder.Entity("TripsDb.Models.Transport", b =>
@@ -105,26 +76,13 @@ namespace TripsDb.Migrations
 
             modelBuilder.Entity("TripsDb.Models.Flight", b =>
                 {
-                    b.HasOne("TripsDb.Models.Journey", "Journey")
-                        .WithMany("Flights")
-                        .HasForeignKey("JourneyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("TripsDb.Models.Transport", "Transport")
                         .WithMany()
                         .HasForeignKey("TransportId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Journey");
-
                     b.Navigation("Transport");
-                });
-
-            modelBuilder.Entity("TripsDb.Models.Journey", b =>
-                {
-                    b.Navigation("Flights");
                 });
 #pragma warning restore 612, 618
         }
