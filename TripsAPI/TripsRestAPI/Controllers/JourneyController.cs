@@ -2,6 +2,14 @@
 using Microsoft.AspNetCore.Mvc;
 using TripsDb.Models;
 
+using System.Net.Http;
+using Newtonsoft.Json.Linq;
+using System.Text;
+using System.Linq;
+using Microsoft.IdentityModel.Tokens;
+using TripsRestAPI.Utilities;
+using System.Collections.Generic;
+
 namespace TripsRestAPI.Controllers
 {
 
@@ -16,18 +24,32 @@ namespace TripsRestAPI.Controllers
             _context = context;
         }
 
-        [HttpGet]
-        public IEnumerable<Journey> Get() {
-            var journeys =  _context.Journey.ToList();
 
-            if (journeys.Count != 0) {
-                return journeys;
+
+
+        [HttpGet]
+        public async Task<List<List<Flight>>>  Get(string origin, String destination)
+        {
+            if (origin == null || destination == null) { 
+                return new List<List<Flight>>();
             }
 
-            // Get journeys from third party URL complete
-            // add Journeys to DB
-            // return Journeys
+            var flights = _context.Flight.ToList();
+            if(flights.IsNullOrEmpty() ) {  
+                var apiFlights = await FlightUtilities.getMultipleReturnFlightsFromApi();
+                flights = new FlightMapper().MapAndStore(apiFlights);
+            }
+
+            var pathFinder = new FlightPathFinder(flights);
+            var journeys = pathFinder.FindAllPaths(origin, destination);
+
+
             return journeys;
+ 
+
         }
+
+   
+
     }
 }
