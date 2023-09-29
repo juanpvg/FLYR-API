@@ -28,13 +28,14 @@ namespace TripsRestAPI.Controllers
 
 
         [HttpGet]
-        public async Task<List<List<Flight>>>  Get(string origin, String destination)
+        public async Task<List<Journey>>  Get(string origin, String destination)
         {
             if (origin == null || destination == null) { 
-                return new List<List<Flight>>();
+                return new List<Journey>();
             }
 
             var flights = _context.Flight.ToList();
+
             if(flights.IsNullOrEmpty() ) {  
                 var apiFlights = await FlightUtilities.getMultipleReturnFlightsFromApi();
                 flights = new FlightMapper().MapAndStore(apiFlights);

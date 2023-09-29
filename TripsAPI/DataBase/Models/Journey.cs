@@ -10,8 +10,13 @@ namespace TripsDb.Models
 
         public string Destination { get; set; } = "";
 
-        public double Price { get; set; }
+        public double Price { get; set; } = 0;
 
+        public List<Flight> Flights { get; set; } = new List<Flight>();
 
+        public void addFlight(Flight flight) { 
+            this.Flights.Add(flight);
+            this.Price = this.Price + flight.Price;
+        }
     }
 }
