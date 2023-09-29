@@ -11,7 +11,7 @@
 -  Agregar en el mismo proyecto TripsDb 
 
 ###  4. Configuración de conexión
--  Cambiar el contenido de "DeveloperEnv" (está en la línea 10) en el archivo "appsettings.json". Se debe reemplazar el valor a los correspondientes de la base de datos local
+-  Cambiar el contenido de "DeveloperEnv" (está en la línea 10) en el archivo "appsettings.json". Se debe reemplazar el valor a los correspondientes de la base de datos local.
 
 ###  5. Creacion de tablas y ejecución del servicio.
 - En la consola de comandos de visual studio, verificar que el proyecto principal sea "TripsDb", ya que allí se encuentran los modelos.
