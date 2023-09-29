@@ -16,7 +16,29 @@ export class FlightFormComponent {
     // Here, you can make an HTTP request to your API using the values in this.flight
     // Display the result on the screen as needed
     console.log(this.flight);
+    const response = searchFlights(this.flight.origin, this.flight.destination);
   }
+}
+
+
+//'https://localhost:7135/api/Journey?origin=MZL&destination=CAN
+
+function searchFlights(origin:string,  destination:string){
+  const fetchData = async (origin:string, destination:string) => {
+    try {
+        //const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+        const res = await fetch(`https://localhost:7135/api/Journey?origin=${origin}&destination=${destination}`)
+        const data = await res.json();
+        console.log("información:");
+        console.log(data);
+        return data;
+    } catch (error) {
+      console.log("error:");
+      console.log(error);
+        return(error);
+    }
+  }
+  return fetchData(origin,destination);
 }
 
 
