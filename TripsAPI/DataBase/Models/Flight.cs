@@ -11,10 +11,10 @@ namespace TripsDb.Models
         [Column(TypeName = "int")]
         public int FlightId { get; set; }
 
-        [Column(TypeName = "nvarchar(100)")]
+        [Column(TypeName = "nvarchar(3)")]
         public string Origin { get; set; } = "";
 
-        [Column(TypeName = "nvarchar(100)")]
+        [Column(TypeName = "nvarchar(3)")]
         public string Destination { get; set; } = "";
 
         [Column(TypeName = "decimal(19, 4)")]

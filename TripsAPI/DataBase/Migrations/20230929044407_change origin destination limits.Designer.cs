@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TripsDb.Models;
 
@@ -10,9 +11,11 @@ using TripsDb.Models;
 namespace TripsDb.Migrations
 {
     [DbContext(typeof(TripsDbContext))]
-    partial class TripsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230929044407_change origin destination limits")]
+    partial class changeorigindestinationlimits
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
