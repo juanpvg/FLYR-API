@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { list } from 'postcss';
 
 @Component({
   selector: 'app-flight-form',
@@ -7,16 +8,34 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./flight-form.component.css'],
 })
 export class FlightFormComponent {
-  flight = {
+  searchFlight = {
     origin: '',
     destination: '',
   };
 
+  flight = {
+    flightId: 0,
+    origin: '',
+    destination: '',
+    price: 0
+  };
+
+  journey = {
+    flightId: 0,
+    origin: '',
+    destination: '',
+    price: 0,
+    flights: []
+  };
+
+
+
+  data: any;
+
   onSubmit() {
-    // Here, you can make an HTTP request to your API using the values in this.flight
-    // Display the result on the screen as needed
-    console.log(this.flight);
-    const response = searchFlights(this.flight.origin, this.flight.destination);
+    console.log(this.searchFlight);
+    const response = searchFlights(this.searchFlight.origin, this.searchFlight.destination);
+    this.data = response;
   }
 }
 
