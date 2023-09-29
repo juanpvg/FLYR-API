@@ -1,0 +1,51 @@
+
+<div class="container mx-auto">
+    <h1 class="text-2xl font-bold mt-4 mb-8">Flight Form</h1>
+    <form (ngSubmit)="onSubmit()"  #flightForm="ngForm">
+      <div class="mb-4">
+        <label for="origin" class="block text-gray-700">Origin</label>
+        <input
+          type="text"
+          id="origin"
+          name="origin"
+          [(ngModel)]="flight.origin"
+          #originInput="ngModel"
+          class="border rounded w-full p-2"
+          [class.border-red-500]="originInput.invalid && originInput.touched"
+          minlength="3"
+          maxlength="3"
+          required
+          (input)="flight.origin = flight.origin.toUpperCase()"
+        />
+        <div *ngIf="originInput.invalid && originInput.touched" class="text-red-500 text-sm mt-2">
+          Origin must be 3 characters.
+        </div>
+      </div>
+      <div class="mb-4">
+        <label for="destination" class="block text-gray-700">Destination</label>
+        <input
+          type="text"
+          id="destination"
+          name="destination"
+          [(ngModel)]="flight.destination"
+          #destinationInput="ngModel"
+          class="border rounded w-full p-2"
+          [class.border-red-500]="destinationInput.invalid && destinationInput.touched"
+          minlength="3"
+          maxlength="3"
+          required
+          (input)="flight.destination = flight.destination.toUpperCase()"
+        />
+        <div *ngIf="destinationInput.invalid && destinationInput.touched" class="text-red-500 text-sm mt-2">
+          Destination must be 3 characters.
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        [disabled]="flightForm.invalid"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
