@@ -1,0 +1,25 @@
+<div class="container mx-auto">
+    <h1 class="text-2xl font-bold mt-4 mb-8">Flight Data List</h1>
+    <table class="min-w-full">
+      <thead>
+        <tr>
+          <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+            Origin
+          </th>
+          <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+            Destination
+          </th>
+          <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+            Price
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data">
+          <td class="px-6 py-4 whitespace-no-wrap">{{ item.Origin }}</td>
+          <td class="px-6 py-4 whitespace-no-wrap">{{ item.Destination }}</td>
+          <td class="px-6 py-4 whitespace-no-wrap">{{ item.price }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

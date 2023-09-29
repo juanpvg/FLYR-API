@@ -21,12 +21,10 @@ export class FlightFormComponent {
 }
 
 
-//'https://localhost:7135/api/Journey?origin=MZL&destination=CAN
 
 function searchFlights(origin:string,  destination:string){
   const fetchData = async (origin:string, destination:string) => {
     try {
-        //const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
         const res = await fetch(`https://localhost:7135/api/Journey?origin=${origin}&destination=${destination}`)
         const data = await res.json();
         console.log("información:");
@@ -40,16 +38,3 @@ function searchFlights(origin:string,  destination:string){
   }
   return fetchData(origin,destination);
 }
-
-
-/*import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-flight-form',
-  templateUrl: './flight-form.component.html',
-  styleUrls: ['./flight-form.component.css']
-})
-export class FlightFormComponent {
-
-}
-*/
