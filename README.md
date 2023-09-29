@@ -1,31 +1,37 @@
-# Aplicacion full stack para ....
+# Aplicacion full stack para FLYR.
 
 ### Objetivo.
-
-### Stack
+Solución a la prueba técnica
 
 En este repositiorio encontraras dos aplicaciones:
 
-- APS.NER Rest.
-- Angular 
-- Base de datos 
+- TripsAPI (Backend en .NET CORE)
+- TripsFrontEnd(Angular) 
 
-### Flujo principa de la aplicacion
-El flujo general sera el siguiete:
-
-```mermaid
-sequenceDiagram
-    Alice->>John: Hello John, how are you?
-    John-->>Alice: Great!
-    Alice-)John: See you later!
-```
 
 ## Aplicacion .NET
-expicacion general de est ap y unlink al  [README.md](./TripsAPI/TripsAPI/README.md) de el repo 
+expicacion general de esta aplicación y link al  [README.md](./TripsAPI/TripsAPI/README.md) del repositorio.
 
 
 ## Aplicacion Angular.
-expicacion general de est ap y unlink al  [README.md](./TripsFrontEnd/README.md) de el repo 
+expicacion general de est ap y unlink al  [README.md](./TripsFrontEnd/README.md) del repositorio. 
 
 
-Nota: dentro de cada repo encontraras como correr la aplicaion
+Nota: dentro de cada repo encontraras como ejecutar cada aplicación
+
+
+
+
+### Flujo principal de la aplicacion
+El flujo general es el siguiete:
+
+```mermaid
+sequenceDiagram
+    TripsFrontEnd->>TripsAPI: Información de rutas?
+    TripsAPI-->>DataBase: Busca información
+    DataBase-->>TripsAPI: Respuesta
+    TripsAPI->>TripsFrontEnd: Lista de rutas
+```
+
+
+
