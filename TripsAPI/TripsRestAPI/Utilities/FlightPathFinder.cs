@@ -8,6 +8,7 @@ namespace TripsRestAPI.Utilities
     {
         private readonly List<Flight> flights;
         private AdjacencyGraph<string, Edge<string>> graph;
+        private string origin;
 
         public FlightPathFinder(List<Flight> flights)
         {
@@ -27,11 +28,12 @@ namespace TripsRestAPI.Utilities
             }
         }
 
-        public List<List<Flight>> FindAllPaths(string origin, string destination)
+        public List<Journey> FindAllPaths(string origin, string destination)
         {
-            var allPaths = new List<List<Flight>>();
+            var allPaths = new List<Journey>();
             var visited = new HashSet<string>();
             var currentPath = new List<string>();
+            this.origin = origin;
 
             FindPathsDFS(origin, destination, visited, currentPath, allPaths);
 
@@ -43,22 +45,27 @@ namespace TripsRestAPI.Utilities
             string destination,
             HashSet<string> visited,
             List<string> currentPath,
-            List<List<Flight>> allPaths)
+            List<Journey> allPaths)
         {
             visited.Add(currentCity);
             currentPath.Add(currentCity);
 
             if (currentCity == destination)
             {
-                var path = new List<Flight>();
+                var journey = new Journey();
+                journey.Origin = this.origin;
+                journey.Destination = destination;
                 for (int i = 0; i < currentPath.Count - 1; i++)
                 {
                     var flight = flights.FirstOrDefault(f =>
-                        f.Origin == currentPath[i] && f.Destination == currentPath[i + 1]);
-                    if (flight != null)
-                        path.Add(flight);
+                        f.Origin == currentPath[i] && f.Destination == currentPath[i + 1]
+                    );
+
+                    if (flight != null){
+                        journey.addFlight(flight);
+                    }
                 }
-                allPaths.Add(path);
+                allPaths.Add(journey);
             }
             else
             {
