@@ -1,5 +1,5 @@
 <div class="container mx-auto">
-    <h1 class="text-2xl font-bold mt-4 mb-8">Flight Data List</h1>
+    <h1 class="text-2xl font-bold mt-4 mb-8">Lista de vuelos</h1>
     <div *ngFor="let flight of data" class="mb-4 p-4 border rounded-lg">
       <div class="text-lg font-semibold">{{ flight.origin }} - {{ flight.destination }}</div>
       <div class="text-gray-600">Price: ${{ flight.price }}</div>

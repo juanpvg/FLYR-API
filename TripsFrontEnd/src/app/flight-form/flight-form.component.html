@@ -1,9 +1,9 @@
 
 <div class="container mx-auto">
-    <h1 class="text-2xl font-bold mt-4 mb-8">Flight Form</h1>
+    <h1 class="text-2xl font-bold mt-4 mb-8">Rutas</h1>
     <form (ngSubmit)="onSubmit()"  #flightForm="ngForm">
       <div class="mb-4">
-        <label for="origin" class="block text-gray-700">Origin</label>
+        <label for="origin" class="block text-gray-700">Origen</label>
         <input
           type="text"
           id="origin"
@@ -18,11 +18,11 @@
           (input)="searchFlight.origin = searchFlight.origin.toUpperCase()"
         />
         <div *ngIf="originInput.invalid && originInput.touched" class="text-red-500 text-sm mt-2">
-          Origin must be 3 characters.
+          Origen debe tener 3 letras
         </div>
       </div>
       <div class="mb-4">
-        <label for="searchFlight.destination" class="block text-gray-700">Destination</label>
+        <label for="searchFlight.destination" class="block text-gray-700">Destino</label>
         <input
           type="text"
           id="destination"
@@ -37,15 +37,15 @@
           (input)="searchFlight.destination = searchFlight.destination.toUpperCase()"
         />
         <div *ngIf="destinationInput.invalid && destinationInput.touched" class="text-red-500 text-sm mt-2">
-          Destination must be 3 characters.
+          Destino  debe tener 3 letras
         </div>
       </div>
       <button
         type="submit"
-        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        class="btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
         [disabled]="flightForm.invalid"
       >
-        Submit
+        Buscar
       </button>
     </form>
   </div>

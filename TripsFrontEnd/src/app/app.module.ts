@@ -7,12 +7,14 @@ import { FlightFormComponent } from './flight-form/flight-form.component';
 
 import { FormsModule } from '@angular/forms';
 import { FlightListComponent } from './flight-list/flight-list.component';
+import { CurrencyConverterComponent } from './currency-converter/currency-converter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FlightFormComponent,
-    FlightListComponent
+    FlightListComponent,
+    CurrencyConverterComponent
   ],
   imports: [
     BrowserModule,
