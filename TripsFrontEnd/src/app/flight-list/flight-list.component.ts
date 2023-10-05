@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input,  OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-flight-list',
@@ -6,6 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./flight-list.component.css'],
 })
 export class FlightListComponent implements OnInit {
+  @Input() data : any;
+
+  
+  flight = {
+    flightId: 0,
+    origin: '',
+    destination: '',
+    price: 0
+  };
+
+  journey = {
+    flightId: 0,
+    origin: '',
+    destination: '',
+    price: 0,
+    flights: []
+  };
+
+  /*
   data = [
     {
       origin: 'MZL',
@@ -43,6 +62,7 @@ export class FlightListComponent implements OnInit {
     },
     // Add more flight data objects as needed
   ];
+  */
 
   constructor() {}
 

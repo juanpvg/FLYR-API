@@ -1,7 +1,7 @@
-<app-flight-form></app-flight-form>
+<app-flight-form #sender></app-flight-form>
 
 <div  class="bg-gray-100 min-h-screen">
-  <app-flight-list></app-flight-list>
+  <app-flight-list [data] = "sender.newData"></app-flight-list>
 </div>
 
 <div class="container">
