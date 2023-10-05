@@ -1,0 +1,35 @@
+.container{
+    background: #EFEFEF;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
+
+.block{
+    width: 200px;
+    font-weight: bold;
+    display: -webkit-inline-box;
+    margin-bottom: 10px;
+}
+
+
+
+.btn {
+    background-color: #48abe0;
+    width: 100px;
+    border-color: #276E90;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 20px;
+    box-shadow: 0 2px 4px darkslategray;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+.btn:active {
+    background-color: #48abe0;
+    box-shadow: 0 0 2px darkslategray;
+    transform: translateY(2px);
+}
+  

@@ -1,10 +1,12 @@
-<app-flight-form #sender></app-flight-form>
 
-<div  class="bg-gray-100 min-h-screen">
-  <app-flight-list [data] = "sender.newData"></app-flight-list>
+<div class="containerapp">
+  <div class="containerapp__form">
+    <app-flight-form #sender></app-flight-form>
+  </div>
+  <div  class="containerapp__list">
+    <app-flight-list [data] = "sender.newData"></app-flight-list>
+  </div>
 </div>
 
-<div class="container">
-  <router-outlet></router-outlet>
-</div>
+
 
