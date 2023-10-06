@@ -9,7 +9,7 @@
 
 ###  3. Despliegue del servidor
 -  En la carpeta "TripsFrontEnd" abrir la consola de comandos con permisos de administración.
--En la consola de comandos, ejecutar la línea  `ng serve`
+-En la consola de comandos, ejecutar la línea  `npm run ng serve`
 -En el navegador web se debe ingrsar al enlace `http://localhost:4200/`.
 
 
