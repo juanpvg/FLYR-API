@@ -1,7 +1,7 @@
 
 <div class="container mx-auto">
   <h1 class="table-header">Posibles rutas</h1>
-  <div *ngFor="let flight of data" class="table-row">
+  <div *ngFor="let flight of exampleData" class="table-row">
     <div class="table-cell">
       <div class="text-lg font-semibold">{{ flight.origin }} - {{ flight.destination }}</div>
       <div class="text-gray-600">Price: ${{ flight.price }}</div>
