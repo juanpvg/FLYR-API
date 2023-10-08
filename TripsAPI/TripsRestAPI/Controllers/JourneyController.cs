@@ -36,18 +36,17 @@ namespace TripsRestAPI.Controllers
 
             var flights = _context.Flight.ToList();
 
-            if(flights.IsNullOrEmpty() ) {  
+            if(flights.IsNullOrEmpty() )
+            {
                 var apiFlights = await FlightUtilities.getMultipleReturnFlightsFromApi();
-                flights = new FlightMapper().MapAndStore(apiFlights);
+                flights = new FlightMapper(_context).MapAndStore(apiFlights);
             }
 
             var pathFinder = new FlightPathFinder(flights);
             var journeys = pathFinder.FindAllPaths(origin, destination);
 
-
             return journeys;
  
-
         }
 
    

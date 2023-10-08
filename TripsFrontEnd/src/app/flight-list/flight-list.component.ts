@@ -24,55 +24,6 @@ export class FlightListComponent implements OnInit {
     flights: []
   };
 
-  
-  exampleData = [
-    {
-      origin: 'MZL',
-      destination: 'CAN',
-      price: 700,
-      flights: [
-        {
-          origin: 'MZL',
-          destination: 'MDE',
-          price: 200,
-          transport: {
-            flightCarrier: 'CO',
-            flightNumber: '8001',
-          },
-        },
-        {
-          origin: 'MZL',
-          destination: 'MDE',
-          price: 200,
-          transport: {
-            flightCarrier: 'CO',
-            flightNumber: '8001',
-          }
-        }
-        // Add more flight details as needed
-      ],
-    },
-    {
-      origin: 'MZL',
-      destination: 'CAN',
-      price: 700,
-      flights: [
-        {
-          origin: 'MZL',
-          destination: 'MDE',
-          price: 200,
-          transport: {
-            flightCarrier: 'CO',
-            flightNumber: '8001',
-          },
-        },
-        // Add more flight details as needed
-      ],
-    },
-    // Add more flight data objects as needed
-  ];
-
-  
 
   constructor() {}
 
