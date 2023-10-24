@@ -1,11 +1,11 @@
-import { Component, Input,  OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-flight-list',
   templateUrl: './flight-list.component.html',
   styleUrls: ['./flight-list.component.css'],
 })
-export class FlightListComponent implements OnInit {
+export class FlightListComponent  {
   @Input() data : any;
 
   
@@ -25,7 +25,4 @@ export class FlightListComponent implements OnInit {
   };
 
 
-  constructor() {}
-
-  ngOnInit(): void {}
 }

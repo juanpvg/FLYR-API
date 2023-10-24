@@ -13,6 +13,8 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.9",
           "Newtonsoft.Json": "13.0.3",
           "QuickGraph": "3.6.61119.7",
+          "SonarAnalyzer.CSharp": "9.12.0.78982",
+          "StyleCop.Analyzers": "1.1.118",
           "Swashbuckle.AspNetCore": "6.5.0",
           "TripsDb": "1.0.0"
         },
@@ -1753,6 +1755,8 @@
       "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "SonarAnalyzer.CSharp/9.12.0.78982": {},
+      "StyleCop.Analyzers/1.1.118": {},
       "Swashbuckle.AspNetCore/6.5.0": {
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "6.0.5",
@@ -3584,6 +3588,20 @@
       "sha512": "sha512-VB5cn/7OzUfzdnC8tqAIMQciVLiq2epm2NrAm1E9OjNRyG4lVhfR61SMcLizejzQP8R8Uf/0l5qOIbUEi+RdEg==",
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
+    },
+    "SonarAnalyzer.CSharp/9.12.0.78982": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QxhfMFCNeZWP3gP/R8QM3MuDWm+Esj8Lt3oD61tid5TPuqsaKJtwMZNZWE2FOqqGuKlu3805o8MlkTWBL75skA==",
+      "path": "sonaranalyzer.csharp/9.12.0.78982",
+      "hashPath": "sonaranalyzer.csharp.9.12.0.78982.nupkg.sha512"
+    },
+    "StyleCop.Analyzers/1.1.118": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Onx6ovGSqXSK07n/0eM3ZusiNdB6cIlJdabQhWGgJp3Vooy9AaLS/tigeybOJAobqbtggTamoWndz72JscZBvw==",
+      "path": "stylecop.analyzers/1.1.118",
+      "hashPath": "stylecop.analyzers.1.1.118.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/6.5.0": {
       "type": "package",

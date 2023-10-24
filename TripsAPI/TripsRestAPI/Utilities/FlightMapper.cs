@@ -15,6 +15,7 @@ namespace TripsRestAPI.Utilities
         }
         public Flight MapAndStore(ApiFlight apiFlight)
         {
+        {
             Transport transport = addTransport(apiFlight);
             Flight newFlight = addFlight(apiFlight, transport);
             return newFlight;
