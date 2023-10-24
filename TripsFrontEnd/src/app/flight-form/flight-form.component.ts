@@ -35,11 +35,8 @@ export class FlightFormComponent {
   data: any;
 
   onSubmit() {
-    console.log(this.searchFlight);
     const response = this.searchFlights(this.searchFlight.origin, this.searchFlight.destination);
     this.data = response;
-    console.log("response:");
-    console.log(response);
   }
 
     
@@ -48,14 +45,9 @@ export class FlightFormComponent {
       try {
           const res = await fetch(`https://localhost:7135/api/Journey?origin=${origin}&destination=${destination}`)
           const data = await res.json();
-          console.log("información:");
-          console.log(data);
           this.newData = data;
-          console.log(this.newData);
           return data;
       } catch (error) {
-        console.log("error:");
-        console.log(error);
           return(error);
       }
     }
@@ -65,21 +57,3 @@ export class FlightFormComponent {
 }
 
 
-/*
-function searchFlights(origin:string,  destination:string){
-  const fetchData = async (origin:string, destination:string) => {
-    try {
-        const res = await fetch(`https://localhost:7135/api/Journey?origin=${origin}&destination=${destination}`)
-        const data = await res.json();
-        console.log("información:");
-        console.log(data);
-        return data;
-    } catch (error) {
-      console.log("error:");
-      console.log(error);
-        return(error);
-    }
-  }
-  return fetchData(origin,destination);
-}
-*/
